@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]
+        {
+            height: 30px;
+            width: 300px;
+            border:none;
+        }
+        table{
+            border-collapse: collapse;
+            background:black;
+            justify-items: center;
+           border-color: red;
+        }
+        input[type="button"]
+        {
+          height: 50px;
+          width: 50px;
+          margin: 8px;
+          background: white;
+          font-size: 18px;
+          font-weight: bold;
+          border: none;
+          border-radius: 30px;
+        }
+       
+    </style>
+    <script>
+        function back()
+        {
+            var a=inpt.value;
+            var show=a.slice(0,-1);
+            inpt.value=show;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+    <table border="1"  align="center">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="inpt" name="res">
+                </td>
+            </tr>
+              <tr>
+                 <td><input type="button" value="7" onclick="form1.res.value+='7'"/> </td>
+                 <td><input type="button" value="8"onclick="form1.res.value+='8'"> </td>
+                 <td><input type="button" value="9"onclick="form1.res.value+='9'"> </td>
+                 <td><input type="button" value="%"onclick="form1.res.value+='%'" ></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="4"onclick="form1.res.value+='4'"> </td>
+                <td><input type="button" value="5"onclick="form1.res.value+='5'"> </td>
+                <td><input type="button" value="6"onclick="form1.res.value+='6'"> </td>
+                <td><input type="button" value="*"onclick="form1.res.value+='*'"> </td>
+             </tr>
+             <tr>
+                <td><input type="button" value="1"onclick="form1.res.value+='1'"> </td>
+                <td><input type="button" value="2"onclick="form1.res.value+='2'"> </td>
+                <td><input type="button" value="3"onclick="form1.res.value+='3'"> </td>
+                <td><input type="button" value="-"onclick="form1.res.value+='-'"> </td>
+             </tr>
+             <tr>
+                <td><input type="button" value="0"onclick="form1.res.value+='0'"> </td>
+                <td><input type="button" value="."onclick="form1.res.value+='.'"> </td>
+                <td><input type="button" value="+"onclick="form1.res.value+='+'"> </td>
+                <td><input type="button" value="="onclick="form1.res.value=eval(form1.res.value)"> </td>
+             </tr>
+           
+           <tr>
+            <td colspan="2">
+                <input type="button" value="Clear All" style="width: 90%;background:red;" 
+                onclick="form1.res.value=''"/> </td>
+           
+
+            
+                <td colspan="2">
+                    <input type="button" value="Back" style="width: 90%;background:green;" 
+                    onclick="back() "/></td>
+           </tr>
+           
+       
+    </table>
+    </form>
+</body>
+</html>
